@@ -1,0 +1,15 @@
+{
+  "initial_count": 10000,
+  "clean_count": 9918,
+  "elapsed_time_sec": 0.005856037139892578,
+  "throughput_records_per_sec": 1707639.4430420976,
+  "data_quality_pre_clean": {
+    "revenue": 82,
+    "cost": 0
+  },
+  "transformation_log": [
+    "Logged pre-cleaning data quality metrics.",
+    "Dropped rows with missing 'revenue' or 'cost'.",
+    "Computed 'profit' as revenue minus cost."
+  ]
+}

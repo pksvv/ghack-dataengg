@@ -1,0 +1,3 @@
+Logged pre-cleaning data quality metrics.
+Dropped rows with missing 'revenue' or 'cost'.
+Computed 'profit' as revenue minus cost.
