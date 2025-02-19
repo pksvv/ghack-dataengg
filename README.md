@@ -49,51 +49,49 @@ generative_data_pipeline/
    ```bash
    git clone <repository_url>
    cd generative_data_pipeline
-Create and activate a virtual environment:
+
+2. **Create and activate a virtual environment:**
+
+   ```bash
+   python -m venv venv
+   source venv/bin/activate
+   pip install -r requirements.txt
+
+3. **Running the Application**
+
+   ```bash
+   Start the FastAPI server:
+   uvicorn app.main\:app --reload
+
+4. **The server will run at http://127.0.0.1:8000.**
+
+5. **Access the API Documentation:**
+
+6. **Open your browser and navigate to:**
+   ```bash
+   http://127.0.0.1:8000/docs
+
+7. **Test the /generate_pipeline Endpoint:**
+
+8. **Use the interactive Swagger UI** to send a POST request with the following JSON payload:
+
+   ```bash
+   {
+    "natural_language_input": "I need a data pipeline that ingests raw CSV data, removes records with missing revenue or cost, computes profit as revenue minus cost, logs data quality metrics, and evaluates performance."
+    }
+
+9. **The response will include:**
 
 
-python -m venv venv
-# On macOS/Linux:
-source venv/bin/activate
-# On Windows:
-venv\Scripts\activate
-Install the required dependencies:
-
-
-pip install -r requirements.txt
-Running the Application
-Start the FastAPI server:
-
-
-uvicorn app.main\:app --reload
-The server will run at http://127.0.0.1:8000.
-
-Access the API Documentation:
-
-Open your browser and navigate to:
-
-http://127.0.0.1:8000/docs
-
-Test the /generate_pipeline Endpoint:
-
-Use the interactive Swagger UI or any API client (e.g., Postman) to send a POST request with the following JSON payload:
-
-
-{
-  "natural_language_input": "I need a data pipeline that ingests raw CSV data, removes records with missing revenue or cost, computes profit as revenue minus cost, logs data quality metrics, and evaluates performance."
-}
-The response will include:
-
-Generated design documentation
-Production-ready pipeline code
-Inline code documentation
-Generated unit tests
-Pipeline execution results (on a synthetic dataset)
-Evaluation metrics
-Code Quality & Evaluation
-Evaluation Metrics: The app/eval.py module implements metrics to assess the generated code quality. This includes:
-Pass@k: Checking for an exact match with a reference code snippet.
-CodeBLEU & CodeBERTScore: Evaluating similarity.
-CodeScore: Token overlap-based heuristic.
-Halstead Complexity: Measuring code complexity.
-Logging: The pipeline and data generation steps log important information (e.g., record counts, performance metrics) to help with monitoring and debugging.
+- Generated design documentation
+- Production-ready pipeline code
+- Inline code documentation
+- Generated unit tests
+- Pipeline execution results (on a synthetic dataset)
+- Evaluation metrics
+    Code Quality & Evaluation
+- Evaluation Metrics: The app/eval.py module implements metrics to assess the generated code quality. This includes:
+    Pass@k: Checking for an exact match with a reference code snippet.
+    CodeBLEU & CodeBERTScore: Evaluating similarity.CodeScore: Token overlap-based heuristic.
+    Halstead Complexity: Measuring code complexity.
+    Logging: The pipeline and data generation steps log important information (e.g., record counts, performance metrics) to help with monitoring and debugging.
