@@ -15,8 +15,7 @@ This project demonstrates a generative AI-driven solution to automate the creati
 ## Project Structure
 
 The project is organized as follows:
-
-generative_data_pipeline/
+```
 ├── app/
 │   ├── __init__.py # Package initialization
 │   ├── main.py # FastAPI application entrypoint
@@ -25,7 +24,7 @@ generative_data_pipeline/
 │   ├── sample_data_generator.py # Module to generate a synthetic dataset with data quality issues
 │   └── eval.py # Evaluation metrics for generated code (Pass@k, CodeBLEU, etc.)
 └── requirements.txt # Project dependencies
-
+```
 ## Features
 
 - **Generative Artifacts:** Uses simulated LangChain calls to generate:
